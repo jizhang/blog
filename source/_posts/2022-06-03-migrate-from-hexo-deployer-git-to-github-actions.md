@@ -48,7 +48,7 @@ Previously with [`hexo-deployer-git`][1] plugin, we generate the static site loc
 ```yaml
 deploy:
   type: git
-  repo: git@github.com:jizhang/jizhang.github.com
+  repo: git@github.com:username/username.github.io
 ```
 
 Now with GitHub Actions, a CI/CD platform available to public repositories, the build process can be triggered on remote servers whenever master branch is updated. Hexo provides an [official document][2] on how to setup the workflow, but it turns out the configuration can be a little bit simpler, thanks to the new versions of `actions` (we'll cover it later).

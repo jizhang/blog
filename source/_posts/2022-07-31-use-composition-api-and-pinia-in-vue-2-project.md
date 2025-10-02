@@ -20,7 +20,7 @@ The main advantage of Composition API is that you can organize your code in a mo
 
 <!-- more -->
 
-Another important advantage is better type inference. With Vue 2, TypeScript has a difficulty in inferring types from Options API, so we have to use `Vue.extend` or [class-based components][7]. Though Vue 2.7 backports `defineComponent` that improves this situation, Composition API still provides a more natural and concise way to define types, for it only consists of plain variables and functions. So in this article, I will use TypeScript as the demo language. If your legacy project hasn't adopted TypeScript yet, you can check out my previous post *[Add TypeScript Support to Vue 2 Project][6]*.
+Another important advantage is better type inference. With Vue 2, TypeScript has a difficulty in inferring types from Options API, so we have to use `Vue.extend` or [class-based components][7]. Though Vue 2.7 backports `defineComponent` that improves this situation, Composition API still provides a more natural and concise way to define types, for it only consists of plain variables and functions. So in this article, I will use TypeScript as the demo language. If your legacy project hasn't adopted TypeScript yet, you can check out my previous post {% post_link add-typescript-support-to-vue-2-project %}.
 
 For maintainers of larger projects, Composition API also brings better code reuse through custom composable functions, as well as smaller JS bundle and better performance. And last but not least, you can always use both APIs in one project. The Vue team has no plan to remove Options API.
 
@@ -181,7 +181,7 @@ function login(form: Props) {
 
 We can see `props` and `emits` are both strongly typed, so TS will highlight any violation of the component interface.
 
-Template refs are also supported in Composition API with TS. I wrote a post about wrapping Bootstrap 5 modal into a Vue component, with template ref and `v-model`. Please check out [*Use Bootstrap V5 in Vue 3 Project*][9].
+Template refs are also supported in Composition API with TS. I wrote a post about wrapping Bootstrap 5 modal into a Vue component, with template ref and `v-model`. Please check out {% post_link use-bootstrap-v5-in-vue3-project %}.
 
 ## From Vuex to Pinia
 
@@ -258,8 +258,6 @@ function login() {
 [3]: https://github.com/vueuse/vue-demi
 [4]: https://blog.vuejs.org/posts/vue-2-7-naruto.html
 [5]: https://vuejs.org/guide/extras/composition-api-faq.html
-[6]: https://jizhang.github.io/blog/2022/07/24/add-typescript-support-to-vue-2-project/
 [7]: https://github.com/vuejs/vue-class-component
 [8]: https://vuejs.org/api/reactivity-core.html
-[9]: https://jizhang.github.io/blog/2022/06/11/use-bootstrap-v5-in-vue3-project/
 [10]: https://pinia.vuejs.org/introduction.html#comparison-with-vuex-3-x-4-x

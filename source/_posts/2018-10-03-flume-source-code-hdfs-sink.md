@@ -13,7 +13,7 @@ Sink is the last component of Apache Flume data flow, and it is used to output d
 
 ## Sink Component Lifecycle
 
-In the [previous article][1], we learnt that every Flume component implements `LifecycleAware` interface, and is started and monitored by `LifecycleSupervisor`. Sink component is not directly invoked by this supervisor, but wrapped in `SinkRunner` and `SinkProcessor` classes. Flume supports three different [sink processors][2], to connect channel and sinks in different semantics. But here we only consider the `DefaultSinkProcessor`, that accepts only one sink, and we will skip the concept of sink group as well.
+In the {% post_link flume-source-code-component-lifecycle 'previous article' %}, we learnt that every Flume component implements `LifecycleAware` interface, and is started and monitored by `LifecycleSupervisor`. Sink component is not directly invoked by this supervisor, but wrapped in `SinkRunner` and `SinkProcessor` classes. Flume supports three different [sink processors][2], to connect channel and sinks in different semantics. But here we only consider the `DefaultSinkProcessor`, that accepts only one sink, and we will skip the concept of sink group as well.
 
 ![Sink Component LifeCycle](/images/flume/sink-component-lifecycle.png)
 
@@ -244,7 +244,6 @@ for (ExecutorService execService : toShutdown) {
 * http://hadoop-hbase.blogspot.com/2012/05/hbase-hdfs-and-durable-sync.html
 
 
-[1]: https://jizhang.github.io/blog/2017/10/23/flume-source-code-component-lifecycle/
 [2]: https://flume.apache.org/FlumeUserGuide.html#flume-sink-processors
 [3]: http://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/fs/FileSystem.html
 [4]: https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/fs/FSDataOutputStream.html

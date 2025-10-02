@@ -49,7 +49,7 @@ Content-Type: application/json
 ```
 
 * We create Pydantic model by extending `BaseModel`, which is the basic approach. There are others ways like `dataclass`, `TypeAdapter`, or dynamic creation of models.
-* Model fields are simply defined by class attributes and type annotations. Unlike other SerDe libraries, Pydantic is natively built with Python type hints. If you are not familiar with it, please check out my previous [blog post][2].
+* Model fields are simply defined by class attributes and type annotations. Unlike other SerDe libraries, Pydantic is natively built with Python type hints. If you are not familiar with it, please check out my previous {% post_link python-static-type-check 'blog post' %}.
 * In the API, we manually create a model instance `user`. Usually we create them from request body or database models, which will be demonstrated later.
 * Then we serialize, or "dump" the model into a Python dict, that in turn is transformed by Flask into a JSON string. We can also use `user.model_dump_json()`, which returns the JSON string directly, but then the response header needs to be manually set to `application/json`, so we would rather let Flask do the job.
 * `mode="json"` tells Pydantic to serialize field values into JSON representable types. For instance, `datetime` and `Decimal` will be converted to string. Flask can also do this conversion, but we prefer keeping serialization in Pydantic model for clarity and ease of change.
@@ -860,7 +860,6 @@ Content-Type: application/json
 
 
 [1]: https://pydantic.dev/
-[2]: https://jizhang.github.io/blog/2024/01/19/python-static-type-check/
 [3]: https://sqlmodel.tiangolo.com/
 [4]: https://github.com/annotated-types/annotated-types
 [5]: https://docs.pydantic.dev/latest/concepts/strict_mode/
