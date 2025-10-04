@@ -27,7 +27,7 @@ jobs:
         env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           HMAC_SECRET: ${{ secrets.HMAC_SECRET }}
-          DEPLOY_URL: ${{ vars.DEPLOY_URL }}
+          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
         run: |
           PROJECT=$(echo -n "$GITHUB_REPOSITORY" | cut -d'/' -f2)
           SHORT_SHA=${GITHUB_SHA:0:8}
