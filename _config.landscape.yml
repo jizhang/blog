@@ -1,9 +1,9 @@
 # Header
 menu:
   Home: /
-  Big Data: /categories/Big-Data
-  Programming: /categories/Programming
-  Archives: /archives
+  Big Data: /categories/Big-Data/
+  Programming: /categories/Programming/
+  Archives: /archives/
   中文: /cn/
 rss: /atom.xml
 banner: /banner.jpg
