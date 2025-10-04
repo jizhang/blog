@@ -1,11 +1,9 @@
 ---
 title: Python Static Type Check
-tags:
-  - python
-  - mypy
-categories:
-  - Programming
+categories: Programming
+tags: [python, mypy]
 date: 2024-01-19 20:27:56
+alt_zh: /2020/10/04/python-static-typing/
 ---
 
 

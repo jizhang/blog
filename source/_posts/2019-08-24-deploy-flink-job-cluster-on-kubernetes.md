@@ -5,6 +5,7 @@ tags:
   - flink
 categories: Big Data
 date: 2019-08-24 19:33:22
+alt_zh: /2019/08/25/deploy-flink-job-cluster-on-kubernetes/
 ---
 
 
