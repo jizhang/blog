@@ -16,7 +16,7 @@ Composition API is one of the major features of Vue 3, and it greatly changes ho
 
 The main advantage of Composition API is that you can organize your code in a more flexible way. Previously with Options API, we can only group codes by `data`, `methods`, and hooks, while with Composition API, codes constituting one feature can be put together. There is a nice figure in the official document *[Composition API FAQ][5]* that illustrates how code blocks look differently after applying Composition API.
 
-![Options API vs. Composition API](/images/typescript/composition-api-after.png)
+![Options API vs. Composition API](/images/typescript/composition-api-after.webp)
 
 <!-- more -->
 

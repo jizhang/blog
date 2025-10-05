@@ -17,7 +17,7 @@ Now that TypeScript has become the de facto standard in frontend development, ne
 
 For those who are new to TypeScript, I recommend you read the guide *[TypeScript for JavaScript Programmers][1]*. In short, TypeScript is a superset of JavaScript. It adds type hints to variables, as well as other syntax like class, interface, decorator, and some of them are already merged into ECMAScript. When compiling, TypeScript can do static type check. It will try to infer the variable type as much as possible, or you need to define the type explicitly. Here is the official [TypeScript Cheat Sheet][2].
 
-![TypeScript Cheat Sheet - Interface](/images/typescript/cheat-sheet-interface.png)
+![TypeScript Cheat Sheet - Interface](/images/typescript/cheat-sheet-interface.webp)
 
 <!-- more -->
 
@@ -93,7 +93,7 @@ Options like `baseUrl` and `moduleResolution` tells TypeScript how to find and i
 
 In Vue 2.7, we can use `defineComponent` with Options API to get better type inference. The following example is taken directly from [Vue 3 document][9]. To enable type check in VS Code, install the [Volar][8] extension.
 
-![Vue component in VS Code](/images/typescript/vue-component-in-vs-code.png)
+![Vue component in VS Code](/images/typescript/vue-component-in-vs-code.webp)
 
 The `count` variable in template is correctly inferred as number type. We can add more type hints to component properties, emits, and event handlers. Please refer to the [document][10] for further details.
 
@@ -169,7 +169,7 @@ Found 1 error in 11671 ms.
 
 After `yarn start`, local dev server will be available in 4s, and type check takes 11s to finish. The error message will also be displayed on the web page.
 
-![ForkTsCheckerWebpackPlugin](/images/typescript/fork-ts-checker-webpack-plugin.png)
+![ForkTsCheckerWebpackPlugin](/images/typescript/fork-ts-checker-webpack-plugin.webp)
 
 Add this plugin to webpack config, and turn on its support for Vue SFC.
 
