@@ -13,7 +13,7 @@ date: 2018-12-23 21:42:44
 
 Apache Flink is another popular big data processing framework, which differs from Apache Spark in that Flink uses stream processing to mimic batch processing and provides sub-second latency along with exactly-once semantics. One of its use cases is to build a real-time data pipeline, move and transform data between different stores. This article will show you how to build such an application, and explain how Flink guarantees its correctness.
 
-![Apache Flink](/images/flink/arch.png)
+![Apache Flink](/images/flink/arch.webp)
 
 ## Demo ETL Application
 
@@ -124,7 +124,7 @@ bin/flink run -c flink.kafka.KafkaLoader target/sandbox-flink-0.0.1-SNAPSHOT.jar
 
 We can check out the job information in Flink dashboard:
 
-![Flink Dashboard](/images/flink/dashboard.png)
+![Flink Dashboard](/images/flink/dashboard.webp)
 
 #### Cancel and Resume Job with Savepoint
 
@@ -165,7 +165,7 @@ Flink streaming application can be divided into three parts, source, process, an
 
 Flink's checkpointing mechanism is based on Chandy-Lamport algorithm. It periodically inserts light-weight barriers into data stream, dividing the stream into sets of records. After an operator has processed all records in the current set, a checkpoint is made and sent to the coordinator, i.e. job manager. Then the operator will send this barrier to its down-streams. When all sinks finish checkpointing, this checkpoint is marked as completed, which means all data before the checkpoint has been properly processed, all operator states are saved, and the application can recover from this checkpoint when encountering failures.
 
-![Stream Barrier](/images/flink/stream-barrier.png)
+![Stream Barrier](/images/flink/stream-barrier.webp)
 
 For operators with multiple up-streams, a technique called stream aligning is applied. If one of the up-streams is delayed, the operator will stop processing data from other up-streams, until the slow one catches up. This guarantees exactly-once semantics of the operator state, but will certainly introduce some latency. Apart from this `EXACTLY_ONCE` mode of checkpointing, Flink also provides `AT_LEAST_ONCE` mode, to minimize the delay. One can refer to [document][6] for further details.
 
