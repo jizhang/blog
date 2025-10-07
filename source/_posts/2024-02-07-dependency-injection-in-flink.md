@@ -7,6 +7,7 @@ tags:
 categories:
   - Big Data
 date: 2024-02-07 13:28:41
+alt_zh: /2024/02/07/dependency-injection-in-flink/
 ---
 
 
