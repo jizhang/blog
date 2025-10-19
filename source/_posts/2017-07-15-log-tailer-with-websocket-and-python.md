@@ -1,11 +1,9 @@
 ---
 title: Log Tailer with WebSocket and Python
-tags:
-  - python
-  - websocket
-  - ops
-categories: Programming
+categories: [DevOps]
+tags: [python, websocket]
 date: 2017-07-15 19:21:03
+alt_zh: /2017/07/16/log-tailer-with-websocket-and-python/
 ---
 
 
