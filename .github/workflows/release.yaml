@@ -93,4 +93,5 @@ jobs:
             -F "timestamp=$TIMESTAMP" \
             -F "signature=$SIGNATURE" \
             -F "file=@build.tar.gz" \
+            --fail \
             http://$DEPLOY_HOST:$DEPLOY_PORT/deploy/hmac
